@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>班级大屏叫号</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 配置弹窗 -->
+  <div id="configModal" class="modal">
+    <div class="modal-content">
+      <h2>系统配置</h2>
+      <p>首次使用请配置 Supabase 连接信息</p>
+      <div class="form-group">
+        <label>Supabase URL</label>
+        <input type="text" id="configUrl" placeholder="https://xxx.supabase.co">
+      </div>
+      <div class="form-group">
+        <label>Supabase Anon Key</label>
+        <input type="text" id="configKey" placeholder="eyJhbGciOiJIUzI1NiIs...">
+      </div>
+      <button id="saveConfigBtn" class="btn-primary">保存并连接</button>
+    </div>
+  </div>
+
+  <!-- 主显示区域 -->
+  <div id="mainScreen" class="hidden">
+    <div class="status-bar">
+      <span id="connectionStatus">● 连接中...</span>
+      <span id="currentTime"></span>
+    </div>
+    
+    <div id="messageContainer" class="message-container hidden">
+      <div id="messageBox" class="message-box">
+        <div id="messageType" class="message-type"></div>
+        <div id="messageContent" class="message-content"></div>
+        <div id="messageTimer" class="message-timer"></div>
+      </div>
+    </div>
+
+    <div class="idle-content">
+      <div class="logo">📢</div>
+      <div class="title">班级叫号系统</div>
+      <div class="subtitle">等待消息中...</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

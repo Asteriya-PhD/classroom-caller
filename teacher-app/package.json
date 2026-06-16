@@ -1,0 +1,16 @@
+{
+  "name": "classroom-caller",
+  "version": "1.0.0",
+  "description": "班级大屏叫号系统 - 老师端",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "build:win": "tauri build --target x86_64-pc-windows-msvc",
+    "build:mac": "tauri build --target universal-apple-darwin"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.0"
+  }
+}

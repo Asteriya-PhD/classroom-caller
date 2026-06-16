@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>班级大屏叫号系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📢 班级大屏叫号</h1>
+      <div class="status" id="status">未连接</div>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="form-group">
+          <label for="studentName">学生姓名</label>
+          <input type="text" id="studentName" placeholder="输入学生姓名（可选）">
+        </div>
+
+        <div class="form-group">
+          <label>消息类型</label>
+          <div class="radio-group">
+            <label class="radio-label">
+              <input type="radio" name="msgType" value="call" checked>
+              <span class="radio-custom"></span>
+              叫到讲台
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="msgType" value="notice">
+              <span class="radio-custom"></span>
+              通知
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="msgType" value="custom">
+              <span class="radio-custom"></span>
+              自定义
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">消息内容</label>
+          <input type="text" id="message" placeholder="自动填充，也可手动修改">
+        </div>
+
+        <div class="form-group">
+          <label for="duration">弹窗时长</label>
+          <select id="duration">
+            <option value="5">5秒</option>
+            <option value="10" selected>10秒</option>
+            <option value="30">30秒</option>
+            <option value="60">60秒</option>
+          </select>
+        </div>
+
+        <button id="sendBtn" class="btn-primary">发 送</button>
+      </div>
+
+      <div class="history">
+        <h3>最近发送</h3>
+        <div id="historyList" class="history-list">
+          <p class="empty-tip">暂无记录</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+  "name": "classroom-caller-screen",
+  "version": "1.0.0",
+  "description": "班级大屏叫号系统 - 大屏端",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "build:dir": "electron-builder --win --dir"
+  },
+  "build": {
+    "appId": "com.classroom.caller",
+    "productName": "班级大屏叫号",
+    "win": {
+      "target": "nsis",
+      "icon": "renderer/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "dependencies": {
+    "electron-store": "^8.1.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  }
+}

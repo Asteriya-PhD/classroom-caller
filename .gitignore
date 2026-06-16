@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+.pnp.*
+.yarn/
+
+# Rust build
+target/
+
+# macOS
+.DS_Store
+*.dmg
+
+# Windows
+*.exe
+*.msi
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Tauri
+src-tauri/target/
